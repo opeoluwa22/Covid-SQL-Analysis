@@ -7,10 +7,13 @@ This project performs an analysis of global COVID-19 data using SQLite. The anal
 The analysis uses two main datasets:
 - **CovidDeaths1**: Contains COVID-19 case and death statistics by country and date
 - **CovidVaccinations**: Contains COVID-19 vaccination data by country and date
-Time Period**: January 2020 – December 2021
-**Coverage**: 200+ countries, daily data
-**Key Columns**: location, date, population, total_cases, total_deaths, new_vaccinations
 Both datasets are sourced from [Our World in Data](https://ourworldindata.org/coronavirus) and were split into two tables for analysis purposes.
+
+**Time Period**: January 2020 – December 2021
+
+**Coverage**: 200+ countries, daily data
+
+**Key Columns**: location, date, population, total_cases, total_deaths, new_vaccinations
 
 ## Analysis Questions
 1. Total Cases vs Total Deaths: What is the death percentage for each country?
