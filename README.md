@@ -3,6 +3,15 @@
 ## Project Overview
 This project performs an analysis of global COVID-19 data using SQLite. The analysis explores infection rates, death rates, and vaccination progress across different countries.
 
+## Interactive Visualization
+Here is a preview of the interactive dashboard built from this analysis. Click the image below to explore the data and filters live on Tableau Public.
+
+[![Covid Dashboard Preview](covid-dashboard.png)](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1)
+
+*If you prefer a direct text link, you can [view the interactive dashboard here](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1).*
+
+---
+
 ## Dataset Description
 The analysis uses two main datasets:
 - **CovidDeaths1**: Contains COVID-19 case and death statistics by country and date
@@ -52,6 +61,7 @@ Both datasets are sourced from [Our World in Data](https://ourworldindata.org/co
 ## Tools Used
 - SQLite
 - DB Browser for SQLite
+- Tableau Public
 
 ## How to Run
 1. Open DB Browser for SQLite
