@@ -6,7 +6,7 @@ This project performs an analysis of global COVID-19 data using SQLite. The anal
 ## Interactive Visualization
 Here is a preview of the interactive dashboard built from this analysis. Click the image below to explore the data and filters live on Tableau Public.
 
-[![Covid Dashboard Preview](covid-dashboard.png)](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1)
+[![Covid Dashboard Preview](covid_dashboard_preview.png)](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1)
 
 *If you prefer a direct text link, you can [view the interactive dashboard here](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1).*
 
