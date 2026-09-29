@@ -1,8 +1,11 @@
 # COVID-19 SQL Analysis
 This project performs an analysis of daily COVID-19 data from 2020 to 2021 across 200+ countries using SQLite. The analysis explores infection rates, death rates, and vaccination progress across different countries.
 
-## Interactive Visualization
-Here is a preview of the interactive dashboard built from this analysis. Click the direct text link, to [view the interactive dashboard here](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1).
+## Interactive Tableau Dashboard
+Here is a preview of the interactive dashboard built from this analysis.
+
+[![Tableau Dashboard Preview](Covid_Dashboard_preview.png)](https://public.tableau.com/app/profile/opeoluwa.omoniyi6262/viz/CovidDashboardVisualisation_17830834849240/Dashboard1)
+*> Click the preview image above to interact with the live dashboard on Tableau Public.*
 
 ## Dataset Description
 The analysis uses two main datasets:
@@ -15,6 +18,27 @@ Both datasets are sourced from [Our World in Data](https://ourworldindata.org/co
 **Coverage**: 200+ countries, daily data
 
 **Key Columns**: location, date, population, total_cases, total_deaths, new_vaccinations
+
+## SQL Highlights 
+
+### Calculating Rolling Vaccinations using Window Functions
+```sql
+SELECT 
+    dea.continent, 
+    dea.location, 
+    dea.date, 
+    dea.population, 
+    vac.new_vaccinations,
+    SUM(CAST(vac.new_vaccinations AS INT)) OVER (
+        PARTITION BY dea.location 
+        ORDER BY dea.location, dea.date
+    ) AS rolling_people_vaccinated
+FROM CovidDeaths dea
+JOIN CovidVaccinations vac
+    ON dea.location = vac.location 
+    AND dea.date = vac.date
+WHERE dea.continent IS NOT NULL;
+```
 
 ## Analysis Questions
 1. Total Cases vs Total Deaths: What is the death percentage for each country?
